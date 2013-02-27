@@ -4,9 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @q = Article.search(params[:q])
-    #@articles = @q.result(:distinct => true)
-    @articles = @q.result(:distinct => true).paginate(:page => params[:page], :per_page => 5)
+    @articles = Article.all
 
     respond_to do |format|
       format.html # index.html.erb

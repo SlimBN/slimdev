@@ -28,6 +28,9 @@
 						<li style="padding: 17px 16px 17px;">
 							<%= link_to "Logout", logout_path %>
 						</li>						
+						<li style="padding: 17px 16px 17px;">
+							<%= current_user.username %>
+						</li>						
 						<% else %>
 						<li style="padding: 7px 16px 8px;">
 							<%= link_to "Login", login_path %> or <%= link_to "Register", register_path, :class => "btn" %>
@@ -39,7 +42,7 @@
 			</div>
 	</header>
 
-	<p id="notice"><%= notice %></p>
+	<p id="notice" class="notice"><%= notice %></p>
 	<p id="alert"><%= alert %></p>
 
 

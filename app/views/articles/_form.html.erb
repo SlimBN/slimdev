@@ -33,12 +33,7 @@
     <div class="span3">
       <div class="field">
         <div>
-          <select data-placeholder="Choose a Category..." class="chzn-select" multiple style="width:350px;" tabindex="4">
-            <option value=""></option>
-            <% Category.all.each do |cat| %>
-                <option value="<%= cat.id %>"><%= cat.name %></option>
-            <% end %>
-          </select>
+          <%= f.collection_select :category_id, Category.order(:name), :id, :name, {}, {multiple: false} %>
         </div>
       </div>
       <div class="actions">

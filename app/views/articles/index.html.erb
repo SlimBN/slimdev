@@ -1,7 +1,7 @@
 <div class="container second-floor-bg">
     <div class="row">
-        <div class="span8">
-            <% Article.order("created_at DESC").each do |article| %>
+        <div id="articles" class="span8">
+            <% @articles.order("created_at DESC").each do |article| %>
                 <div class="article-list-title">
                     <%= link_to article.title, article %>
                     <% if user_signed_in? && current_user.id == article.user_id %>
@@ -16,13 +16,16 @@
                     <%= truncate(article.content , :length => 456) %>
                 </div>
             <% end %>
+            <%= will_paginate @articles %>
         </div>
 
         <div class="span4">
             <% if user_signed_in? %>
                 <%= current_user.username %>
+                </br>
+                <%= link_to 'New Article', new_article_path %>
             <% end %>
         </div>
 
-    <%= link_to 'New Article', new_article_path %>
+    
 </div>

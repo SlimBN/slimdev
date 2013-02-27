@@ -6707,3 +6707,474 @@ Served asset /ui/microphone-6-64.png - 304 Not Modified (23ms)
 
 Started GET "/assets/home_backgrounds/2.jpg" for 127.0.0.1 at 2013-02-27 09:02:43 +0100
 Served asset /home_backgrounds/2.jpg - 304 Not Modified (47ms)
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing a block to devise_for is deprecated. Please remove the block from devise_for (only the block, the call to devise_for must still exist) and call devise_scope :user do ... end with the block instead. (called from block in <top (required)> at E:/slimdev/config/routes.rb:11)
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateArticles (20130216140434)
+Migrating to CreateCategories (20130216140730)
+Migrating to CreateContinents (20130216140839)
+Migrating to CreateCountries (20130216140950)
+Migrating to CreateIssues (20130216141155)
+Migrating to CreateJournals (20130216141333)
+Migrating to CreatePages (20130216141419)
+Migrating to CreateStates (20130216141643)
+Migrating to CreateTemplates (20130216141829)
+Migrating to CreateUsers (20130216142152)
+Migrating to CreatePagesHasArticles (20130216142544)
+Migrating to AddDeviseToUsers (20130218130049)
+Migrating to CreateRedactorAssets (20130218220317)
+Migrating to ActsAsFollowerMigration (20130224201041)
+Migrating to CreateMakeFlaggableTables (20130224205421)
+Migrating to AddOmniauthToUsers (20130711233744)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (34.0ms)[0m  ALTER TABLE "users" ADD "provider" varchar(255)
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "uid" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130711233744')
+  [1m[36m (125.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+DEPRECATION WARNING: Passing a block to devise_for is deprecated. Please remove the block from devise_for (only the block, the call to devise_for must still exist) and call devise_scope :user do ... end with the block instead. (called from block in <top (required)> at E:/slimdev/config/routes.rb:14)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-27 09:25:17 +0100
+Processing by HomeController#index as HTML
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT "articles".* FROM "articles" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (169.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 916ms (Views: 863.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /buttons.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /application.css - 304 Not Modified (54ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /dashboard.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/devise.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /devise.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /general.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /home.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/omniauth_callbacks.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /omniauth_callbacks.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/subscriptions.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /subscriptions.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/chosen.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /chosen.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/redactor-rails/css/redactor.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /redactor-rails/css/redactor.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/redactor-rails/index.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /redactor-rails/index.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /jquery.js - 304 Not Modified (33ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:19 +0100
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /twitter/bootstrap.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/jquery-backstretch.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /jquery-backstretch.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/redactor-rails/redactor.min.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /redactor-rails/redactor.min.js - 304 Not Modified (33ms)
+
+
+Started GET "/assets/redactor-rails/config.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /redactor-rails/config.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/redactor-rails/index.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /redactor-rails/index.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /lib/abstract-chosen.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /lib/select-parser.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /chosen.jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /chosen-jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/ajax-chosen.jquery.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /ajax-chosen.jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/ajax-chosen-jquery.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /ajax-chosen-jquery.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /dashboard.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/omniauth_callbacks.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /omniauth_callbacks.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /application.js - 304 Not Modified (70ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /logo.png - 304 Not Modified (4ms)
+
+
+Started GET "/assets/home_backgrounds/2.jpg" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /home_backgrounds/2.jpg - 304 Not Modified (6ms)
+
+
+Started GET "/assets/ui/microphone-6-64.png" for 127.0.0.1 at 2013-02-27 09:25:20 +0100
+Served asset /ui/microphone-6-64.png - 304 Not Modified (4ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2013-02-27 09:25:24 +0100
+
+
+Started GET "/users/auth/facebook/callback?state=d6bdab90b7bd9c45947748eecff389607b6fa83cf5a356b4&code=AQDF6Ti4c4L4CtJr2MYo9tZ9Ia3sprVzhyY87WQPah6Q1T-UB1w8ZFVg-QGtoFDvGH4IZzJM29v8EwL4TDOhx9S7F56PRB5UhLdECjEQJIvYhvlj-MzI6dd_zrFzwQ3GB-hw7j1pJZZh1pZQauFDS6XfqAssMfNgtS6UNOhzoXSg2knlw0-BKCLIUCrMhb9hkdEX_Uy2Uv7nfRXvC9csgzUJ" for 127.0.0.1 at 2013-02-27 09:25:30 +0100
+Processing by OmniauthCallbacksController#facebook as HTML
+  Parameters: {"state"=>"d6bdab90b7bd9c45947748eecff389607b6fa83cf5a356b4", "code"=>"AQDF6Ti4c4L4CtJr2MYo9tZ9Ia3sprVzhyY87WQPah6Q1T-UB1w8ZFVg-QGtoFDvGH4IZzJM29v8EwL4TDOhx9S7F56PRB5UhLdECjEQJIvYhvlj-MzI6dd_zrFzwQ3GB-hw7j1pJZZh1pZQauFDS6XfqAssMfNgtS6UNOhzoXSg2knlw0-BKCLIUCrMhb9hkdEX_Uy2Uv7nfRXvC9csgzUJ"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100001035037350' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'marwen.belghith@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."username" = 'marwen.belghith' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 574ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-02-27 09:25:32 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-27 09:25:32 +0100
+Processing by HomeController#index as HTML
+  [1m[36mArticle Load (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT "articles".* FROM "articles" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (9.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:32 +0100
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:32 +0100
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:32 +0100
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /buttons.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /dashboard.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/devise.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /devise.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/general.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /general.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/omniauth_callbacks.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /omniauth_callbacks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/subscriptions.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /subscriptions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/chosen.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /chosen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/redactor-rails/css/redactor.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /redactor-rails/css/redactor.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/redactor-rails/index.css?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /redactor-rails/index.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /twitter/bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-backstretch.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /jquery-backstretch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/redactor-rails/redactor.min.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /redactor-rails/redactor.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/redactor-rails/config.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /redactor-rails/config.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/chosen.jquery.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /chosen.jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lib/abstract-chosen.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /lib/abstract-chosen.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/select-parser.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /lib/select-parser.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/redactor-rails/index.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /redactor-rails/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/chosen-jquery.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /chosen-jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ajax-chosen.jquery.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:33 +0100
+Served asset /ajax-chosen.jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ajax-chosen-jquery.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:34 +0100
+Served asset /ajax-chosen-jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:34 +0100
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:34 +0100
+Served asset /dashboard.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:34 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/omniauth_callbacks.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:34 +0100
+Served asset /omniauth_callbacks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-27 09:25:34 +0100
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-02-27 09:25:34 +0100
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home_backgrounds/2.jpg" for 127.0.0.1 at 2013-02-27 09:25:34 +0100
+Served asset /home_backgrounds/2.jpg - 304 Not Modified (3ms)

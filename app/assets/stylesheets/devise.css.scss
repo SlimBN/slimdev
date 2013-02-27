@@ -1,0 +1,42 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+.modalikebox {
+	margin: 20px;
+	padding: 3px;
+
+	border-radius: 15px 15px 5px 5px;
+
+	width: auto;
+	background: #EEE;
+	border-radius: 3px;
+
+	.header {
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: bold;
+		padding: 10px 10px;
+		color: #555;
+		text-shadow: 0 1px 0 #fff;
+		display: block;
+		border: 1px solid #CACACA;
+		border-radius: 5px 5px 0 0;
+		border-bottom: 0 none;
+		background-color: #eaeaea;
+		background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+		background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+		background-image: linear-gradient(#fafafa, #eaeaea);
+		background-repeat: repeat-x;
+	}
+
+	.content {
+		background-color: #f2f2f2;
+		border: 1px solid #CACACA;
+		padding: 30px;
+	}
+}

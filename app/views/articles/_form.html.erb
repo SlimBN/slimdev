@@ -1,0 +1,50 @@
+<%= form_for(@article) do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="span12">
+      <input type="text"  id="article_title" class="span8" name="article[title]" placeholder="Article's title...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="span9">
+      <div class="field">
+        <textarea id="article_content" name="article[content]" class='redactor' placeholder="Enter text ..." ></textarea>
+      </div>
+      <div class="field">
+        <%= f.label :is_draft %><br />
+        <%= f.check_box :is_draft %>
+      </div>
+      
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+
+    </div>
+
+    <div class="span3">
+      <div class="field">
+        <div>
+          <select data-placeholder="Choose a Category..." class="chzn-select" multiple style="width:350px;" tabindex="4">
+            <option value=""></option>
+            <% Category.all.each do |cat| %>
+                <option value="<%= cat.id %>"><%= cat.name %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    </div>
+
+  </div>
+<% end %>

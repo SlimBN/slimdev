@@ -1,0 +1,63 @@
+<h1>Listing pages</h1>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Pos1</th>
+    <th>Pos2</th>
+    <th>Pos3</th>
+    <th>Pos4</th>
+    <th>Pos5</th>
+    <th>Pos6</th>
+    <th>Pos7</th>
+    <th>Pos8</th>
+    <th>Pos9</th>
+    <th>Pos10</th>
+    <th>Pos11</th>
+    <th>Pos12</th>
+    <th>Pos13</th>
+    <th>Pos14</th>
+    <th>Pos15</th>
+    <th>Pos16</th>
+    <th>Issue</th>
+    <th>Template</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pages.each do |page| %>
+  <tr>
+    <td><%= page.number %></td>
+    <td><%= page.pos1 %></td>
+    <td><%= page.pos2 %></td>
+    <td><%= page.pos3 %></td>
+    <td><%= page.pos4 %></td>
+    <td><%= page.pos5 %></td>
+    <td><%= page.pos6 %></td>
+    <td><%= page.pos7 %></td>
+    <td><%= page.pos8 %></td>
+    <td><%= page.pos9 %></td>
+    <td><%= page.pos10 %></td>
+    <td><%= page.pos11 %></td>
+    <td><%= page.pos12 %></td>
+    <td><%= page.pos13 %></td>
+    <td><%= page.pos14 %></td>
+    <td><%= page.pos15 %></td>
+    <td><%= page.pos16 %></td>
+    <td><%= page.issue_id %></td>
+    <td><%= page.template_id %></td>
+    <td><%= page.created_at %></td>
+    <td><%= page.updated_at %></td>
+    <td><%= link_to 'Show', page %></td>
+    <td><%= link_to 'Edit', edit_page_path(page) %></td>
+    <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Page', new_page_path %>

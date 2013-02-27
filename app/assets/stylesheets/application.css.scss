@@ -1,0 +1,200 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree 
+ *= require chosen
+ *= require redactor-rails
+ */
+
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+	width: 100%;
+	height: 48px;
+
+
+  padding-bottom:3px;
+  -webkit-box-shadow:inset 0 -4px rgba(255,255,255,0.1),inset 0 -5px rgba(0,0,0,0.1),0 1px rgba(0,0,0,0.05);
+  box-shadow:inset 0 -4px rgba(255,255,255,0.1),inset 0 -5px rgba(0,0,0,0.1),0 1px rgba(0,0,0,0.05);
+
+  display:inline-block;
+  vertical-align:top;
+  line-height:3em;
+  padding-top:0;
+  font-weight:bold;
+  font-size: 1.5em;
+  color:#505050;
+  text-align:center;
+  text-shadow:0 1px rgba(255,255,255,0.5);
+  background:#212421;border:0px #fff;
+  border-radius:2px;
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
+
+
+		.header_left {
+			margin-left: -100px;
+
+			padding: 0px;
+
+			display: block;
+
+			.logo {
+				margin-top: -1px;
+
+				border-left: 1px solid #000;
+
+				  background: #E72431;
+				  background-image: -webkit-linear-gradient(top, #E72431, #FF2439);
+				  background-image: -moz-linear-gradient(top, #E72431, #FF2439);
+				  background-image: -o-linear-gradient(top, #E72431, #FF2439);
+				  background-image: linear-gradient(to bottom, #E72431, #FF2439);
+				box-shadow: -1px 0 0 rgba(255,255,255,.08);
+			
+				a {
+					display: block;
+					padding: 6px 0 0 8px;
+					height: 40px;
+					width: 	84px;
+					border-width: 1px;
+					border-style: solid;
+					border-color: rgba(173,73,0,.7) rgba(255,255,255,.15) rgb(173,73,0);
+				}
+
+				a:hover {
+					text-decoration: none;
+					background-color: transparent;
+				}
+			}
+
+			.navigation-left {
+				color: #777;
+				display: inline-block;
+				padding: 0px;
+
+				.navmenu {
+					border-left: 1px solid rgba(255,255,255,.05);
+					border-right: 1px solid rgba(255,255,255,.05);
+					box-shadow: -1px 0 0 rgba(255,255,255,.05);
+					-webkit-backface-visibility: hidden;
+
+					display: inline-block;
+
+					margin: 0;
+					list-style: none;
+
+					li {
+						float: left;
+						position: relative;
+
+						border-right: 1px solid rgba(0,0,0,.5);
+						border-left: 1px solid rgba(0,0,0,.5);
+						display: list-item;
+						text-align: -webkit-match-parent;
+
+						line-height: 21px;
+						display: inline-block;
+						padding: 13px 16px 10px;
+						margin-left: 10px;
+						text-shadow: 0 1px 0 #000;
+						-webkit-transition: color .2s linear,-webkit-box-shadow .2s linear;
+						-moz-transition: color .2s linear,box-shadow .2s linear;
+						-o-transition: color .2s linear,box-shadow .2s linear;
+						transition: color .2s linear,box-shadow .2s linear;
+
+						color: #ccc;
+						text-shadow: 0 1px 0 #000;
+
+						a:hover {
+							text-decoration: none;
+							background-color: transparent;
+						}
+					}
+				}
+			}
+
+			.navigation-right {
+				color: #777;
+				display: inline-block;
+				padding: 0px;
+
+
+				.navmenu {
+					border-left: 1px solid rgba(255,255,255,.05);
+					border-right: 1px solid rgba(255,255,255,.05);
+					box-shadow: -1px 0 0 rgba(255,255,255,.05);
+					-webkit-backface-visibility: hidden;
+
+					display: inline-block;
+
+					margin: 0;
+					list-style: none;
+
+				line-height: 18px;
+
+					li {
+						float: left;
+						position: relative;
+
+						border-right: 1px solid rgba(0,0,0,.5);
+						border-left: 1px solid rgba(0,0,0,.5);
+						display: list-item;
+						text-align: -webkit-match-parent;
+
+						line-height: 11px;
+						display: inline-block;
+						padding: 13px 16px 10px;
+						margin-left: 0px;
+						text-shadow: 0 1px 0 #000;
+						-webkit-transition: color .2s linear,-webkit-box-shadow .2s linear;
+						-moz-transition: color .2s linear,box-shadow .2s linear;
+						-o-transition: color .2s linear,box-shadow .2s linear;
+						transition: color .2s linear,box-shadow .2s linear;
+
+						color: #ccc;
+						text-shadow: 0 1px 0 #000;
+
+
+						a:hover {
+							text-decoration: none;
+							background-color: transparent;
+						}
+					}
+				}
+			}
+		}
+
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+.margin0 {
+	margin: 0px 0px 0px 0px;
+}
+.margin10right {
+	margin: 0px 10px 0px 0px;
+}
+.margin0left {
+	margin: 0px 0px 0px 10px;
+}
+
+.row-fit {
+	margin-left: 200px;
+}

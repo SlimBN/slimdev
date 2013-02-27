@@ -1,0 +1,63 @@
+
+<p id="notice"><%= notice %></p>
+
+
+<div class="row">
+  <div class="span12">
+<p>
+  <h2><%= @article.title %></h2>
+
+  <% if @article.is_draft == true %>
+    <span class="label label-warning">Is A Draft</span>
+  <% end %>
+</p>
+  </div>
+</div>
+<div class="row">
+  <div class="span8">
+<p>
+  <%= @article.content %>
+</p>
+  </div>
+  <div class="span4">
+    <div class="well">
+      <p>
+        <b>Published <%= time_ago_in_words(@article.created_at) %> ago...</b>
+      </p>
+
+      <p>
+        <b>Category:</b>
+        <%= @article.category_id %>
+      </p>
+    </div>
+
+    <%= link_to 'Edit', edit_article_path(@article), :class => "btn" %>
+<p>
+  <b>Is draft:</b>
+  <%= @article.is_draft %>
+</p>
+
+
+
+<p>
+  <b>User:</b>
+  <%= @article.user_id %>
+</p>
+
+
+
+<p>
+  <b>Created at:</b>
+  <%= @article.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @article.updated_at %>
+</p>
+
+
+ |
+<%= link_to 'Back', articles_path %>
+  </div>
+</div>

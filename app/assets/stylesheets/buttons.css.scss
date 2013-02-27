@@ -1,0 +1,138 @@
+
+
+/************************************************************
+*
+*
+* Buttons Core
+*
+*
+************************************************************/
+
+
+.button {
+  padding-bottom:3px;
+  -webkit-box-shadow:inset 0 -2px rgba(255,255,255,0.1),inset 0 -3px rgba(0,0,0,0.1),0 1px rgba(0,0,0,0.05);
+  box-shadow:inset 0 -2px rgba(255,255,255,0.1),inset 0 -3px rgba(0,0,0,0.1),0 1px rgba(0,0,0,0.05);
+
+  display:inline-block;
+  vertical-align:top;
+  line-height:3em;
+  padding-top:0;
+  font-weight:bold;
+  font-size: 1.5em;
+  color:#505050;
+  text-align:center;
+  text-shadow:0 1px rgba(255,255,255,0.5);
+  background:#eaefef;border:0px #fff;
+  border-radius:2px;
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
+}
+
+button:hover,.button:hover,button:focus,.button:focus {
+  color:white;
+  background:#20aae5;
+  text-decoration:none;
+  text-shadow:0 1px rgba(0,0,0,0.15);
+  outline:none;
+}
+
+button:active,.button:active {
+  padding-bottom:2px;
+  border-top:1px solid #fff;
+  -webkit-box-shadow:inset 0 -2px rgba(0,0,0,0.1),0 1px rgba(0,0,0,0.05);
+  box-shadow:inset 0 -2px rgba(0,0,0,0.1),0 1px rgba(0,0,0,0.05);
+}
+
+button,.button {
+  height:3em;
+  padding-left:.625em;
+  padding-right:.625em;
+  cursor:pointer;
+}
+
+
+/************************************************************
+*
+*
+* Color Variants
+*
+*
+************************************************************/
+
+.button-blue {
+  color:white;
+  text-shadow:0 1px rgba(0,0,0,0.15);
+  background:#20aae5;
+}
+
+.button-blue:hover,.button-blue:focus {
+  background:#009bd9;
+}
+
+.button-green {
+  color:white;
+  text-shadow:0 1px rgba(0,0,0,0.15);
+  background:#59b329;
+}
+
+.button-green:hover,.button-green:focus {
+  background:#2dab2e;
+}
+
+.button-red {
+  color:white;
+  text-shadow:0 1px rgba(0,0,0,0.15);
+  background:#E72431;
+}
+
+.button-red:hover,.button-red:focus {
+  background:#FF2439;
+}
+
+
+
+
+/************************************************************
+*
+*
+* Buttons Group Prototype
+*
+*
+************************************************************/
+
+
+
+.button-group {
+  display:inline-block;
+  vertical-align:top;
+}
+
+.button-group>li {
+  float:left;
+}
+
+.button-group>li>.button {
+  display:block;
+  border-radius:0;
+}
+
+.button-group>li>.active {
+  color:white;
+  text-shadow:0 1px rgba(0,0,0,0.15);
+  background:#59b329;
+  cursor:default;
+}
+
+.button-group>li:first-child>.button {
+  border-radius:2px 0 0 2px;
+}
+
+.button-group>li:last-child>.button {
+  border-radius:0 2px 2px 0;
+}
+
+.button-group>li:only-child>.button {
+  border-radius:2px;
+}

@@ -1,0 +1,133 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home-presentation-header {
+	position: absolute;
+	top: 110px;
+	left: 30px;
+	font-size: 42px;
+	line-height: 44px;
+	margin: 0;
+	display: inline-block;
+	padding: 2px 5px;
+	font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+	color: #fff;
+	background-color: rgba(0,0,0,.7);
+}
+
+.home-presentation-1 {
+	position: absolute;
+	top: 158px;
+	left: 30px;
+	display: block;
+	padding: 2px 5px;
+	font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+	color: #fff;
+	background-color: rgba(0,0,0,.7);
+	font-size: 28px;
+	line-height: 30px;
+	font-weight: 100;
+}
+
+.home-presentation-2 {
+	position: absolute;
+	top: 192px;
+	left: 30px;
+	display: block;
+	padding: 2px 5px;
+	font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+	color: #fff;
+	background-color: rgba(0,0,0,.7);
+	font-size: 28px;
+	line-height: 30px;
+	font-weight: 100;
+}
+
+.home-presentation-3 {
+	position: absolute;
+	top: 226px;
+	left: 30px;
+	display: block;
+	padding: 2px 5px;
+	font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+	color: #fff;
+	background-color: rgba(0,0,0,.7);
+	font-size: 28px;
+	line-height: 30px;
+	font-weight: 100;
+}
+
+.home-presentation-4 {
+	position: absolute;
+	top: 260px;
+	left: 30px;
+	display: block;
+	padding: 2px 5px;
+	font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+	color: #fff;
+	background-color: rgba(0,0,0,.7);
+	font-size: 28px;
+	line-height: 30px;
+	font-weight: 100;
+}
+
+.sign-home-positioned {
+	position: absolute;
+	left: 60px;
+	top: 320px;
+
+	ul {
+		margin: 0px;
+		padding: 0px;
+
+		li {
+			margin: 0px;
+			padding-right: 30px;
+			padding-left: 30px;
+		}
+	}
+}
+
+.home-news {
+	padding-top: 40px;
+	color: #fff;
+	font-size: 15px;
+	line-height: 19px;
+	text-shadow: 0 1px 2px rgba(0,0,0,.2);
+	font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+
+	.carousel {
+
+	}
+}
+
+
+/*************************************************************
+*
+*
+* ICONICS PART
+*
+*
+*************************************************************/
+
+.micro {
+	padding-left: 64px;
+	background-image: url(asset-path("ui/microphone-6-64.png", image));
+	background-repeat: no-repeat;
+	background-size: 50px;
+}
+
+.carousel-head {
+  font-weight:bold;
+  font-size: 1.5em;
+  color:#333333;
+  text-shadow:0 1px rgba(255,255,255,0.5);
+
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.carousel-content {
+	line-height: 18px;
+}

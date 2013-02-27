@@ -1,0 +1,33 @@
+<%= form_for(@pages_has_article) do |f| %>
+  <% if @pages_has_article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pages_has_article.errors.count, "error") %> prohibited this pages_has_article from being saved:</h2>
+
+      <ul>
+      <% @pages_has_article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :page_id %><br />
+    <%= f.number_field :page_id %>
+  </div>
+  <div class="field">
+    <%= f.label :articles_id %><br />
+    <%= f.number_field :articles_id %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br />
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

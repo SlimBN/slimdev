@@ -1,0 +1,79 @@
+<div class="row">
+	<div>
+		<h1 class="home-presentation-header">Wanna stay connected?</h1>
+		<span class="home-presentation-1">Right from your computer</span>
+		<span class="home-presentation-2">Check the news everymorning</span>
+		<span class="home-presentation-3">And get the last unbiased data</span>
+		<span class="home-presentation-4">From YOUR news-network</span>
+	</div>
+	<div class="span2">
+
+	</div>
+	<div class="span3">
+
+	</div>
+</div>
+
+<div class="row sign-home-positioned">
+	<ul>
+		<li class="button button-blue">
+			<%= link_to "Sign In With Twitter", user_omniauth_authorize_path(:twitter), :class => "" %>
+		</li>
+		<li class="button button-blue">
+			<%= link_to "Sign In With Facebook", "", :class => "" %>
+		</li>
+		<li class="button button-red">
+			<%= link_to "Sign up", new_registration_path(resource_name) %>
+		</li>
+	</ul>
+<div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+	    $('.carousel').carousel({
+	        interval: 4000
+	    });
+
+	    $('.carousel').carousel('cycle');
+	});
+</script>
+
+<div class="row home-news">
+	<div class="span1"></div>
+	<div id="news" class="carousel slide span10">
+	  <!-- Carousel items -->
+	  <div class="carousel-inner">
+	  	<div class="item active">
+	  		<div class="row" style="padding-left: 60px;">
+		  		<div class="row micro carousel-head">
+		  			<%= Article.last.user.username %> : </br>
+		  			<%= Article.last.title %>
+		  		</div>
+		  		<div class="row carousel-content">
+			  		<%= truncate(Article.last.content , :length => 456) %>
+			  	</div>
+		  	</div>
+		</div>
+	  	<% Article.all.each do |article| %>
+	  	<div class="item">
+	  		<div class="row" style="padding-left: 60px;">
+		  		<div class="row micro carousel-head">
+		  			<%= article.user.username %> : </br>
+		  			<%= article.title %>
+		  		</div>
+		  		<div class="row carousel-content">
+			  		<%= truncate(article.content , :length => 456) %>
+		  		</div>
+		  	</div>
+		</div>
+		<% end %>
+	  </div>
+	</div>
+	<div class="span1">
+</div>
+
+<script>
+  $.backstretch([
+    "assets/home_backgrounds/2.jpg"  
+  ], {duration: 4000});
+</script>

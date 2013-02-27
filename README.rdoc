@@ -1,0 +1,64 @@
+== Welcome to Unb
+
+  Unb is a script where you have absolutely nothing to, you get out of here, yeah yeah, you get the hell out of here
+
+
+== Steps To Do Now
+
+1. Implement a WYSIWYG editor in Bootstrap:
+      https://github.com/Nerian/bootstrap-wysihtml5-rails
+
+4. User's Subsciptions
+      https://github.com/theQuazz/acts_as_follower
+      https://github.com/glp/socialization
+
+5. Change the urls system
+      https://github.com/norman/friendly_id
+      https://gist.github.com/jcasimir/1209730
+
+8. Deal with Chosen Data
+      http://www.youtube.com/watch?NR=1&v=YGTd1pZutbk&feature=endscreen
+
+9. Endless Page
+
+10. Add Omniauth
+
+11. Facebook Share
+
+12. Facebook publish
+
+14. Carrierwave avatars
+
+15. Ajax
+
+16. Journals, facade and creation
+
+17. Background Animation
+      https://github.com/socialreferral/backstretch-rails
+
+18. Votes
+      https://github.com/medihack/make_voteable
+
+
+
+== What is Done
+
+2. View article categories names instead of their ids:  
+
+6. Generate fake data for test:
+      https://github.com/ryanb/populator
+      https://github.com/stympy/faker
+
+7. Pagination:
+      https://github.com/nickpad/will_paginate-bootstrap
+
+3. Install users system
+      Devise
+
+13. Install Redactor-rails
+      https://github.com/SammyLin/redactor-rails
+
+14. Added bootstrap modal to login
+
+15. Added Search engine gem
+      https://github.com/ernie/ransack

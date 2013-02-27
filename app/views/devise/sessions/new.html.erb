@@ -1,0 +1,29 @@
+<div class="container modalikebox" style="width: 400px; text-align: center;">
+	<span class="header">Sign in</span>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+	<div class="content">
+	  	<div class="row">
+			<input id="user_username" name="user[username]" type="text" placeholder="Username">
+		</div>
+
+		<div class="row">
+			<input id="user_password" name="user[password]" type="password" placeholder="Your Password Please">
+		</div>
+
+	  <% if devise_mapping.rememberable? -%>
+	    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+	  <% end -%>
+
+	  <ul class="button-group">
+	  	<li>
+	  		<%= f.submit "Sign in", :class => "button button-green" %>
+	  	</li>
+	  	<li class="button">
+	  		<%= link_to "Sign up", new_registration_path(resource_name) %>
+	  	</li>
+	  </ul>
+	</div>
+<% end %>
+
+</div>

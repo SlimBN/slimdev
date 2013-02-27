@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unb</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<header>
+			<div class="header_left">
+				<h1 class="logo left">
+					<a href=""><%= image_tag("logo.png") %></a>
+				</h1>
+
+				<nav class="navigation-left left">
+					<ul class="navmenu">
+						<li>
+							<%= link_to "Home", root_path %>
+						</li>
+					</ul>
+				</nav>
+
+				<nav class="navigation-right right">
+					<ul class="navmenu">
+						<% if user_signed_in? %>
+						<li style="padding: 17px 16px 17px;">
+							<%= link_to "Logout", logout_path %>
+						</li>						
+						<% else %>
+						<li style="padding: 7px 16px 8px;">
+							<%= link_to "Login", login_path %> or <%= link_to "Register", register_path, :class => "btn" %>
+						</li>
+						<% end %>
+					</ul>
+				</nav>
+
+			</div>
+	</header>
+
+	<p id="notice"><%= notice %></p>
+	<p id="alert"><%= alert %></p>
+
+
+	
+	<%= yield %>
+
+
+</body>
+</html>

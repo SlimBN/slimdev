@@ -1,0 +1,48 @@
+<div class="container second-floor-bg">
+	<div style="display: inline-block; width: 64%;">
+				<div class="box-bg">
+					<h3>Dashboard#index</h3>
+					<% @myjournals.each do |myjournal| %>
+			            <div class="media">
+						  <a class="pull-left" href="#">
+						    <img src="/assets/categories/<%= myjournal.category.name %>.png" class="category-icon media-object">
+						  </a>
+			                <%= current_user.flaggings %>
+			            </div>
+			        <% end %>
+				</div>
+	</div>
+	<div style="display: inline-block; width: 35%; float: right;">
+				<div class="box-bg">
+					<h3>My latest articles</h3>
+					<% @myarticles.each do |myarticle| %>
+			            <div class="media">
+						  <a class="pull-left" href="#">
+						    <img src="/assets/categories/<%= myarticle.category.name %>.png" class="category-icon media-object">
+						  </a>
+			                <%= link_to myarticle.title, myarticle %>
+			                <p>
+			                    In <%= myarticle.category.name %> - 
+			                    <%= time_ago_in_words(myarticle.created_at) %> ago...
+			                </p>
+			            </div>
+			        <% end %>
+				</div>			
+
+				<div class="box-bg">
+					<h3>My latest journals</h3>
+					<% @myjournals.each do |myjournal| %>
+			            <div class="media">
+						  <a class="pull-left" href="#">
+						    <img src="/assets/categories/<%= myjournal.category.name %>.png" class="category-icon media-object">
+						  </a>
+			                <%= link_to myjournal.name, myjournal %>
+			                <p>
+			                    In <%= myjournal.category.name %> - 
+			                    <%= time_ago_in_words(myjournal.created_at) %> ago...
+			                </p>
+			            </div>
+			        <% end %>
+				</div>
+	</div>
+</div>

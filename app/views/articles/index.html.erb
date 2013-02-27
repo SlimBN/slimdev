@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="span8">
+        <% @articles.each do |article| %>
+            <div class="articles">
+                <%= truncate(article.content , :length => 456) %>
+            </div>
+            <div class="overlay">
+                <%= link_to article.title, article %>
+                <p>
+                    In <%= article.category.name %> - 
+                    <%= time_ago_in_words(article.created_at) %> ago...
+                </p>
+            </div>
+        <% end %>
+        <%= will_paginate @articles, :renderer => BootstrapPagination::Rails %>
+    </div>
+
+    <div class="span4">
+        <% if user_signed_in? %>
+            <%= current_user.username %>
+        <% end %>
+    </div>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Is draft</th>
+    <th>Published at</th>
+    <th>User</th>
+    <th>Category</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.content %></td>
+    <td><%= article.is_draft %></td>
+    <td><%= article.published_at %></td>
+    <td><%= article.user_id %></td>
+    <td><%= article.category_id %></td>
+    <td><%= article.created_at %></td>
+    <td><%= article.updated_at %></td>
+    <td><%= link_to 'Show', article %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Article', new_article_path %>
